@@ -9,7 +9,7 @@ namespace games
             Random random = new Random();
             int secretnumber = random.Next(1, 1001);
 
-            int guess = 0;
+            int guess = 10;
             Console.WriteLine("Number guessing game");
             Console.WriteLine("Guess a number between 1 to 1000");
 

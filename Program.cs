@@ -31,14 +31,7 @@ namespace coffeesimulator
             {
                 Console.WriteLine("Exit");
             }
-            
-            //first, give options to user
-            // take user input
-
-
-         
-
-            // if user choses 3, then exit
+ 
         }
     }
 }
