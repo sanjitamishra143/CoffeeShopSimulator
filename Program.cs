@@ -1,6 +1,7 @@
-﻿//Console.WriteLine("Hello, World!");
-/*create a simple project on .net using console of coffee shop simulatior: Ask the user to select coffee type( espresso, latte, 
+﻿/*create a simple project on .net using console of coffee shop simulatior: Ask the user to select coffee type( espresso, latte, 
     cappuccino)....Ask if they want extras( milk, sugar, whipped cream).....Calculate the total cost based on selections.*/
+
+using games;
 
 namespace coffeesimulator
 {
@@ -8,63 +9,36 @@ namespace coffeesimulator
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Coffee Shop");
+            Console.WriteLine("select number: ");
+            Console.WriteLine("1. CoffeeShopSimulator.");
+            Console.WriteLine("2. NumberGuessingGame.");
+            Console.WriteLine("3. Exit");
+            Console.Write("\nEnter the number (1,2,3): ");
 
-            Console.WriteLine("Please select a coffee type:");
-            Console.WriteLine("1. Espresso (800)");
-            Console.WriteLine("2. Latte (1100)");
-            Console.WriteLine("3. Cappucino (1500)");
-            Console.Write("Enter the number of your choice:");
+            string? number = Console.ReadLine();
 
-            string coffeeChoice = Console.ReadLine();
-            int totalCost = 0;
-
-            if(coffeeChoice == "1")
+            if(number == "1")
             {
-                totalCost = 800;
-                Console.WriteLine("You selected Espresso.");
+                // if user choses 1, run coffee shop simulator
+                CoffeeShopSimulator.Run();
             }
-            else if(coffeeChoice == "2")
+            else if(number == "2")
             {
-                totalCost = 1100;
-                Console.WriteLine("You selected Latte.");
-            }
-            else if(coffeeChoice == "3")
-            {
-                totalCost = 1500;
-                Console.WriteLine("You selected Cappucino.");
+                // if user choses 2,
+                NumberGuessingGame.Run();
             }
             else
-            { 
-                Console.WriteLine("Invalid choice.");
-            }
-
-            Console.Write("\nDo you want milk? (yes/no): ");
-            String milkChoice = Console.ReadLine();
-            if(milkChoice == "yes")
             {
-                totalCost = totalCost + 200;
+                Console.WriteLine("Exit");
             }
+            
+            //first, give options to user
+            // take user input
 
 
-            Console.Write("\nDo you want sugar? (yes/no): ");
-            String sugarChoice = Console.ReadLine();
-            if (sugarChoice == "yes")
-            {
-                totalCost = totalCost + 100;
-            }
+         
 
-            Console.Write("\nDo you want whipped cream? (yes/no): ");
-            String whippedcreamChoice = Console.ReadLine();
-            if (whippedcreamChoice == "yes")
-            {
-                totalCost = totalCost + 300;
-            }
-
-            Console.WriteLine("\n.............");
-            Console.WriteLine("Total Cost : " +totalCost);
-            Console.WriteLine("Thank you for your order!");
-
+            // if user choses 3, then exit
         }
     }
 }
